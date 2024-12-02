@@ -1,0 +1,214 @@
+/* Variables */
+:root {
+    --primary-color: #1a1b26;
+    --text-color: #a9b1d6;
+    --accent-color: #7aa2f7;
+    --background-color: #16161e;
+    --card-background: #1a1b26;
+    --transition-speed: 0.3s;
+    --spacing-lg: 2rem;
+    --spacing-md: 1.5rem;
+    --spacing-sm: 1rem;
+    --color-text: #a9b1d6;
+    --color-primary: #7aa2f7;
+    --container-width: 1200px;
+}
+
+[data-theme="light"] {
+    --primary-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #2d4ef5;
+    --background-color: #f5f5f5;
+    --card-background: #ffffff;
+    --color-text: #333;
+    --color-primary: #2d4ef5;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem;
+}
+
+/* Card Section */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 25rem));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+    justify-content: center;
+}
+
+    @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .courses {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Course Card Styles */
+.course-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--color-text);
+    display: block;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+.course-content ul {
+    list-style: none;
+    margin-top: var(--spacing-md);
+}
+
+.course-content li {
+    margin-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.course-content li::before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+}
+
+.course-card.python-card {
+    background: linear-gradient(135deg, rgba(45, 132, 251, 0.1), rgba(45, 132, 251, 0.2));
+    border: 1px solid rgba(45, 132, 251, 0.3);
+}
+
+.course-card.python-card:hover {
+    background: linear-gradient(135deg, rgba(45, 132, 251, 0.2), rgba(45, 132, 251, 0.3));
+}
+
+/* Nav Section */
+.header {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color var(--transition-speed);
+}
+
+.icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .courses {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

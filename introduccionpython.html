@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de Introducción a Python</title>
+    <link rel="stylesheet" href="introduccionpython.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <a href="https://francoortizruiz.github.io/Portfolio/" class="nav-link">Sobre mí</a>
+                <a href="cursopython.html" class="nav-link"><i class="icon-home"></i> Curso de Python</a>
+            </div>
+            <div class="nav-right">
+                <button id="themeToggle" class="icon-button">🌞</button>
+            </div>
+        </nav>
+    </header>
+    <h1>Guía Completa de Introducción a Python</h1>
+
+    <h2>Prefacio</h2>
+    <p>Esta guía está diseñada para llevarte desde los fundamentos más básicos de Python hasta conceptos avanzados de programación. Está dirigida a principiantes sin conocimientos previos de programación y a programadores que buscan aprender Python.</p>
+
+    <h2>Capítulo 1: Fundamentos de Python</h2>
+
+    <h3>1.1 ¿Qué es Python?</h3>
+
+    <h4>Historia del Lenguaje</h4>
+    <ul>
+        <li><strong>Creación</strong>: Desarrollado por Guido van Rossum en 1991</li>
+        <li><strong>Nombre</strong>: Inspirado en el grupo de comedia británico Monty Python</li>
+        <li><strong>Evolución</strong>: Desde su creación, ha pasado por varias versiones, siendo Python 3.x la actual y recomendada</li>
+    </ul>
+
+    <h4>Filosofía y Características Principales</h4>
+    <ul>
+        <li><strong>Zen de Python</strong>: "Simple es mejor que complejo"</li>
+        <li>Enfocado en la legibilidad y productividad del código</li>
+        <li>Comunidad activa y en constante crecimiento</li>
+    </ul>
+
+    <h4>Casos de Uso</h4>
+    <ul>
+        <li><strong>Desarrollo Web</strong>: Django, Flask</li>
+        <li><strong>Ciencia de Datos</strong>: NumPy, Pandas, SciPy</li>
+        <li><strong>Inteligencia Artificial</strong>: TensorFlow, PyTorch</li>
+        <li><strong>Automatización</strong>: Scripting, testing</li>
+        <li><strong>Empresas que lo utilizan</strong>: Google, Netflix, Spotify, NASA</li>
+    </ul>
+
+    <h3>1.2 Características Únicas de Python</h3>
+
+    <h4>Aspectos Técnicos</h4>
+    <ul>
+        <li><strong>Lenguaje Interpretado</strong>: No requiere compilación previa</li>
+        <li><strong>Tipado Dinámico y Fuerte</strong>: Variables pueden cambiar de tipo, pero con chequeo de tipos</li>
+        <li><strong>Multiplataforma</strong>: Funciona en Windows, macOS, Linux</li>
+        <li><strong>Sintaxis Clara</strong>: Legible y cercana al lenguaje humano</li>
+    </ul>
+
+    <h4>Paradigmas de Programación</h4>
+    <ul>
+        <li>Programación Orientada a Objetos</li>
+        <li>Programación Funcional</li>
+        <li>Programación Imperativa</li>
+        <li>Programación Estructurada</li>
+    </ul>
+
+    <h2>Capítulo 2: Preparación del Entorno de Desarrollo</h2>
+
+    <h3>2.1 Instalación de Python</h3>
+
+    <h4>Pasos de Instalación</h4>
+    <ol>
+        <li>Visitar el sitio oficial de Python (python.org)</li>
+        <li>Descargar la última versión de Python 3.x</li>
+        <li>Seguir el asistente de instalación
+            <ul>
+                <li>Windows: Marcar "Add Python to PATH"</li>
+                <li>macOS: Usar instaladores para sistema operativo</li>
+                <li>Linux: Usar gestores de paquetes (apt, yum)</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h4>Gestión de Versiones</h4>
+    <ul>
+        <li><strong>pyenv</strong>: Administrar múltiples versiones de Python</li>
+        <li><strong>virtualenv</strong>: Crear entornos virtuales aislados</li>
+        <li><strong>Conda</strong>: Gestión de entornos y paquetes</li>
+    </ul>
+
+    <h3>2.2 Herramientas y Entornos de Desarrollo</h3>
+
+    <h4>IDEs Recomendados</h4>
+    <ul>
+        <li><strong>PyCharm</strong>: IDE profesional, versiones Community y Professional</li>
+        <li><strong>Visual Studio Code</strong>: Editor ligero, múltiples extensiones</li>
+        <li><strong>Jupyter Notebook</strong>: Ideal para análisis de datos y aprendizaje</li>
+    </ul>
+
+    <h4>Editores de Código</h4>
+    <ul>
+        <li>Sublime Text</li>
+        <li>Atom</li>
+        <li>Notepad++</li>
+    </ul>
+
+    <h4>Consola Interactiva</h4>
+    <ul>
+        <li>Acceso mediante comando `python` o `python3`</li>
+        <li>Permite pruebas rápidas de código</li>
+    </ul>
+
+    <h2>Capítulo 3: Conceptos Básicos</h2>
+
+    <h3>3.1 Tipos de Datos Fundamentales</h3>
+
+    <h4>Números</h4>
+    <pre><code>
+# Enteros (int)
+edad = 30
+cantidad = -15
+
+# Flotantes (float)
+pi = 3.14159
+temperatura = -2.5
+
+# Números Complejos
+numero_complejo = 3 + 4j
+    </code></pre>
+
+    <h4>Cadenas de Texto (str)</h4>
+    <pre><code>
+# Definidas con comillas simples o dobles
+mensaje = "Hola, Python"
+longitud = len(mensaje)
+mayusculas = mensaje.upper()
+    </code></pre>
+
+    <h4>Booleanos (bool)</h4>
+    <pre><code>
+# Valores True o False
+esta_lloviendo = True
+tiene_entrada = False
+    </code></pre>
+
+    <h3>3.2 Variables y Asignación</h3>
+    <pre><code>
+# Ejemplos de nombramiento
+nombre_usuario = "Juan"
+CONSTANTE_GLOBAL = 100
+_variable_privada = 50
+    </code></pre>
+
+    <h3>3.3 Operadores</h3>
+    <pre><code>
+# Operadores Aritméticos
+suma = 10 + 5
+resta = 20 - 7
+multiplicacion = 4 * 6
+division = 15 / 3
+potencia = 2 ** 3
+modulo = 17 % 5
+
+# Operadores de Comparación
+igual = (5 == 5)
+diferente = (5 != 3)
+mayor = (10 > 5)
+menor_igual = (4 <= 4)
+
+# Operadores Lógicos
+and_logico = True and False
+or_logico = True or False
+negacion = not True
+    </code></pre>
+
+    <h2>Capítulo 4: Estructuras de Control</h2>
+
+    <h3>4.1 Estructuras Condicionales</h3>
+    <pre><code>
+# Sentencia if-elif-else
+edad = 20
+if edad < 18:
+    print("Menor de edad")
+elif 18 <= edad < 65:
+    print("Adulto")
+else:
+    print("Adulto mayor")
+    </code></pre>
+
+    <h3>4.2 Bucles</h3>
+    <pre><code>
+# Bucle for
+frutas = ["manzana", "banana", "cereza"]
+for fruta in frutas:
+    print(fruta)
+
+# Bucle while
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1
+
+# Control de bucles
+for numero in range(10):
+    if numero == 3:
+        continue  # Salta esta iteración
+    if numero == 7:
+        break    # Sale completamente del bucle
+    print(numero)
+    </code></pre>
+
+    <h2>Capítulo 5: Estructuras de Datos</h2>
+
+    <h3>5.1 Listas</h3>
+    <pre><code>
+# Creación de listas
+numeros = [1, 2, 3, 4, 5]
+mixed = [1, "texto", True, 3.14]
+
+# Métodos principales
+numeros.append(6)
+numeros.remove(3)
+longitud = len(numeros)
+
+# Slicing
+sublista = numeros[1:4]
+
+# Lista por comprensión
+cuadrados = [x**2 for x in range(10)]
+    </code></pre>
+
+    <h3>5.2 Tuplas</h3>
+    <pre><code>
+# Definición
+coordenadas = (10, 20)
+punto_3d = (5, 10, 15)
+
+# Desempaquetado
+x, y = coordenadas
+    </code></pre>
+
+    <h3>5.3 Diccionarios</h3>
+    <pre><code>
+# Creación
+usuario = {
+    "nombre": "Juan",
+    "edad": 30,
+    "ciudad": "Madrid"
+}
+
+# Acceso y modificación
+print(usuario["nombre"])
+usuario["profesion"] = "Desarrollador"
+
+# Métodos
+claves = usuario.keys()
+valores = usuario.values()
+    </code></pre>
+
+    <h3>5.4 Conjuntos</h3>
+    <pre><code>
+# Creación
+conjunto1 = {1, 2, 3}
+conjunto2 = {3, 4, 5}
+
+# Operaciones
+union = conjunto1.union(conjunto2)
+interseccion = conjunto1.intersection(conjunto2)
+diferencia = conjunto1 - conjunto2
+    </code></pre>
+
+    <h2>Capítulo 6: Funciones</h2>
+
+    <h3>6.1 Definición de Funciones</h3>
+    <pre><code>
+# Sintaxis básica
+def saludar(nombre):
+    """
+    Función que saluda a una persona
+    
+    :param nombre: Nombre de la persona a saludar
+    :return: Mensaje de saludo
+    """
+    return f"Hola, {nombre}!"
+
+# Función con múltiples parámetros
+def calcular_area(base, altura):
+    return base * altura
+    </code></pre>
+
+    <h3>6.2 Funciones Avanzadas</h3>
+    <pre><code>
+# Argumentos por defecto
+def crear_perfil(nombre, edad=18, ciudad="Sin definir"):
+    return {
+        "nombre": nombre,
+        "edad": edad,
+        "ciudad": ciudad
+    }
+
+# Argumentos variables
+def sumar_numeros(*args):
+    return sum(args)
+
+# Funciones lambda
+doblar = lambda x: x * 2
+
+# Decoradores
+def mi_decorador(funcion):
+    def wrapper():
+        print("Antes de la función")
+        funcion()
+        print("Después de la función")
+    return wrapper
+    </code></pre>
+
+    <h2>Capítulo 7: Programación Orientada a Objetos</h2>
+
+    <h3>7.1 Conceptos Básicos</h3>
+    <pre><code>
+# Clases y Objetos
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+    
+    def presentarse(self):
+        return f"Soy {self.nombre} y tengo {self.edad} años"
+
+# Herencia
+class Estudiante(Persona):
+    def __init__(self, nombre, edad, carrera):
+        super().__init__(nombre, edad)
+        self.carrera = carrera
+    
+    def estudiar(self):
+        return f"{self.nombre} está estudiando {self.carrera}"
+    </code></pre>
+
+    <h3>7.2 Encapsulamiento</h3>
+    <pre><code>
+class Cuenta:
+    def __init__(self, saldo_inicial):
+        self._saldo = saldo_inicial
+    
+    @property
+    def saldo(self):
+        return self._saldo
+    
+    def depositar(self, monto):
+        if monto > 0:
+            self._saldo += monto
+    
+    def retirar(self, monto):
+        if 0 < monto <= self._saldo:
+            self._saldo -= monto
+    </code></pre>
+
+    <h2>Capítulo 8: Módulos y Paquetes</h2>
+
+    <h3>8.1 Importación de Módulos</h3>
+    <pre><code>
+# Importación básica
+import math
+print(math.pi)
+
+# Importación específica
+from datetime import datetime
+fecha_actual = datetime.now()
+
+# Importación con alias
+import numpy as np
+array = np.array([1, 2, 3])
+    </code></pre>
+
+    <h2>Capítulo 9: Manejo de Archivos y Excepciones</h2>
+
+    <h3>9.1 Entrada/Salida de Archivos</h3>
+    <pre><code>
+# Escritura de archivo
+with open('ejemplo.txt', 'w') as archivo:
+    archivo.write("Hola, mundo!")
+
+# Lectura de archivo
+with open('ejemplo.txt', 'r') as archivo:
+    contenido = archivo.read()
+    print(contenido)
+    </code></pre>
+
+    <h3>9.2 Manejo de Excepciones</h3>
+    <pre><code>
+def dividir(a, b):
+    try:
+        resultado = a / b
+    except ZeroDivisionError:
+        print("Error: División por cero")
+        return None
+    except TypeError:
+        print("Error: Tipo de dato inválido")
+        return None
+    else:
+        print("División exitosa")
+        return resultado
+    finally:
+        print("Operación de división completada")
+    </code></pre>
+
+    <h2>Capítulo 10: Proyectos Prácticos</h2>
+
+    <h3>10.1 Proyecto: Gestor de Tareas</h3>
+    <pre><code>
+class GestorTareas:
+    def __init__(self):
+        self.tareas = []
+    
+    def agregar_tarea(self, descripcion):
+        tarea = {
+            'descripcion': descripcion,
+            'completada': False
+        }
+        self.tareas.append(tarea)
+    
+    def listar_tareas(self):
+        for i, tarea in enumerate(self.tareas, 1):
+            estado = "✓" if tarea['completada'] else " "
+            print(f"{i}. [{estado}] {tarea['descripcion']}")
+    
+    def marcar_completada(self, indice):
+        if 0 < indice <= len(self.tareas):
+            self.tareas[indice-1]['completada'] = True
+    </code></pre>
+
+    (... previous content remains the same, and I'll add the missing 10.2 section at the end of the body ...)
+
+    <h3>10.2 Proyecto: Juego de Adivinar Número</h3>
+    <pre><code>
+import random
+
+def juego_adivinar_numero():
+    numero_secreto = random.randint(1, 100)
+    intentos = 0
+    
+    print("¡Bienvenido al juego de adivinar el número!")
+    print("Tengo un número entre 1 y 100. ¡Adivina!")
+    
+    while True:
+        try:
+            intento = int(input("Introduce tu número: "))
+            intentos += 1
+            
+            if intento < numero_secreto:
+                print("Demasiado bajo. ¡Intenta de nuevo!")
+            elif intento > numero_secreto:
+                print("Demasiado alto. ¡Intenta de nuevo!")
+            else:
+                print(f"¡Felicidades! Adivinaste el número en {intentos} intentos.")
+                break
+        
+        except ValueError:
+            print("Por favor, introduce un número válido.")
+    </code></pre>
+
+    <script src="introduccionpython.js"></script>
+</body>
+</html>
